@@ -25,6 +25,17 @@ console.log(table2(75)); // STILL prints 6
 ***********************************************************************/
 function recVolume(height) {
   // Your code here
+  let dimension = [height];
+  const volum = (nextDimension) => {
+    if (dimension.length < 3) {
+      dimension.push(nextDimension); 
+    }
+    if (dimension.length === 3) {
+      return dimension[0] * dimension[1] * dimension[2];
+    }
+    return volum;
+  }
+  return volum;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
